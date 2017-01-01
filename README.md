@@ -1,6 +1,6 @@
 # Playground
 
-**TODO: Add description**
+Trying out fun stuff in Elixir
 
 ## Installation
 
