@@ -28,14 +28,14 @@ defmodule Playground.Rot13 do
 
   """
   @spec encode(text) :: text
+  def encode(text) when is_list(text) do: Enum.map(text, &_encode/1)
+
   def encode(text) when is_binary(text) do
     text
       |> to_charlist
       |> encode
       |> to_string
   end
-
-  def encode(text) when is_list(text), do: Enum.map(text, &_encode/1)
 
   defp _encode(c) when c >= ?A and c <= ?Z, do: _rot13(c, ?A)
   defp _encode(c) when c >= ?a and c <= ?z, do: _rot13(c, ?a)
