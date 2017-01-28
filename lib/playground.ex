@@ -1,18 +1,18 @@
 defmodule Playground do
   @moduledoc """
-  Playground snippets
+    Playground snippets
   """
 
   @doc """
-  Causes an exception to be thrown.
+    Causes an exception to be thrown.
 
   ## Examples
 
-    iex> Playground.choke [1, 2]
-    ** (ArgumentError) I don't like lists!
+      iex> Playground.choke [1, 2]
+      ** (ArgumentError) I don't like lists!
 
-    iex> Playground.choke :ok
-    ** (ArgumentError) I don't like anything at all!
+      iex> Playground.choke :ok
+      ** (ArgumentError) I don't like anything at all!
 
   """
   def choke([_, _]) do
