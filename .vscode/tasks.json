@@ -19,7 +19,7 @@
         ],
         "pattern": [
           {
-            "regexp": "^== Compilation (\\w+) on file (.+) ==$",
+            "regexp": "^== Compilation (\\w+) [io]n file (.+) ==$",
             "severity": 1
           },
           {
@@ -49,6 +49,9 @@
     },
     {
       "taskName": "deps.get"
+    },
+    {
+      "taskName": "clean"
     }
   ]
 }
