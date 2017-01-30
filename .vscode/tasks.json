@@ -1,0 +1,54 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "0.1.0",
+  "command": "mix",
+  "isShellCommand": true,
+  "args": [],
+  "showOutput": "always",
+  "tasks": [
+    {
+      "taskName": "compile",
+      "isBuildCommand": true,
+      "showOutput": "silent",
+      "problemMatcher": {
+        "owner": "mix",
+        "fileLocation": [
+          "relative",
+          "${workspaceRoot}"
+        ],
+        "pattern": [
+          {
+            "regexp": "^== Compilation (\\w+) on file (.+) ==$",
+            "severity": 1
+          },
+          {
+            "regexp": "^\\*{2} \\(.+\\) (.+):(\\d+): (.+)$",
+            "file": 1,
+            "line": 2,
+            "message": 3
+          }
+        ]
+      }
+    },
+    {
+      "taskName": "test",
+      "isTestCommand": true,
+      "args": [
+        "--stale"
+      ]
+    },
+    {
+      "taskName": "credo",
+      "args": [
+        "--strict"
+      ]
+    },
+    {
+      "taskName": "docs"
+    },
+    {
+      "taskName": "deps.get"
+    }
+  ]
+}
