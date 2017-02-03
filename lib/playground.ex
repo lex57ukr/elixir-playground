@@ -15,6 +15,7 @@ defmodule Playground do
       ** (ArgumentError) I don't like anything at all!
 
   """
+  @spec choke(list | any) :: nil
   def choke([_, _]) do
     raise ArgumentError, message: "I don't like lists!"
   end

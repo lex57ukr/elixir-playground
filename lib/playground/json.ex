@@ -13,6 +13,7 @@ defmodule Playground.Json do
       {:ok, "{\\"value\\":1,\\"name\\":\\"Jack\\"}"}
 
   """
+  @spec encode(any) :: tuple
   def encode(val), do: Poison.encode(val)
 
   @doc """
@@ -24,6 +25,7 @@ defmodule Playground.Json do
       "{\\"value\\":1,\\"name\\":\\"Jack\\"}"
 
   """
+  @spec encode!(any) :: tuple | nil
   def encode!(val) do
     {:ok, json} = encode(val)
     json
